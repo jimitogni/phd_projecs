@@ -1,0 +1,203 @@
+{
+  "intents": [
+    {
+      "tag": "saldacoes",
+      "patterns": [
+        "Oi",
+        "Olá",
+        "Ola",
+        "Tudo bem com você?",
+        "Tem alguém ai?",
+        "Bom dia",
+        "Boa tarde"
+      ],
+      "responses": [
+        "Olá!",
+        "Olá, como posso ajuda-lo com a sua BitDogLab hojê?",
+        "Oi, como posso ajuda-lo com a sua BitDogLab hojê?"
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": ["Tchau", "Até mais", "Goodbye"],
+      "responses": [
+        "Obrigado por utilizar a BitDogLab, até mais"
+      ]
+    },
+    {
+      "tag": "agradecimento",
+      "patterns": ["Obrigado", "Muito obrigado", "Valeu", "vlw", "obg"],
+      "responses": ["Fico feliz em ajudar!", "Imagina, fico feliz em ajudar!"]
+    },
+    {
+      "tag": "sobre",
+      "patterns": [
+        "O que é a BitDogLab?",
+        "BitDogLab",
+	    "projeto BitDogLab?"
+      ],
+      "responses": [
+        "<h3> Objetivo do projeto: </h3> <p> A BitDogLab, uma iniciativa do Projeto Escola 4.0 da Unicamp, é uma ferramenta educacional dedicada à eletrônica e computação.</p> <p>Baseada na Raspberry Pi Pico H ou W, permite aos usuários explorar, montar e programar utilizando componentes montados na sua placa e também externos conectados de forma organizada e segura.</p> <p> Selecionados meticulosamente, os componentes promovem um aprendizado mão na massa, incentivando os usuários a aprimorar habilidades de programação e eletrônica de maneira sinérgica e progressiva. </p> <p> Esta plataforma enriquecedora oferece uma experiência vibrante, imergindo os usuários em um ambiente de aprendizado colorido, auditivo e sinestésico. </p> <p>Além disso, a BitDogLab é otimizada para programação assistida por modelos de linguagem de grande escala (LLM), como o ChatGPT, facilitando um aprendizado mais intuitivo e assistido por um incansável tutor.</p> <p> O BitDogLab é uma ferramenta para ensinar jovens a programar.</p> <p> É um diferencial da BitDogLab é que seu projeto é totalmente aberto, permitindo que seja livremente copiada, fabricada, montada e melhorada pelos usuários</p>"
+      ]
+    },
+    {
+      "tag": "funcional",
+      "patterns": [
+        "Para que serve a BitDogLab?",
+        "Como a BitDogLab funciona?",
+      	"Para que serve",
+      	"Como funciona?"
+      ],
+      "responses": [
+        "<h3>Funcionalidades da placa BitDogLab: </h3> </br>As principais características da BitDogLab e as suas potenciais possibilidades são resumidas a seguir: </br> - Experiência Prática: O projeto da BitDogLab é compartilhado de forma aberta e gratuita, permitindo que os usuários montem sua própria placa, soldando componente a componente enquanto progridem na programação. Isso proporciona um aprendizado que vai além da teoria e oferece uma experiência valiosa em montagem de placas eletrônicas. </br> - Programação Intuitiva: O uso da IDE Thonny Editor, em conjunto com o MicroPython, oferece uma plataforma amigável, que permite aos iniciantes se aprofundarem na programação sem medo. </br> - Open Source Learning: Sendo o projeto integralmente código aberto, ele convida entusiastas e profissionais a explorar, utilizar, modificar e aprimorar o design original de forma contínua. A colaboração da comunidade pode expandir o escopo do projeto, possibilitando adaptações para outros microcontroladores, como os da Expressif ou STMicro. </br> - Mergulho na Inteligência Artificial: Com o suporte do IABOT, os estudantes não só têm suas dúvidas resolvidas, mas também são introduzidos ao fascinante mundo da IA, abrindo portas para futuras aprendizagens nesta área. </br> - Ferramenta agregadora para aplicar a metodologia STEAM de ensino: </br> A BitDogLab vai além de ser apenas um projeto de uma placa de circuito impresso. Ela representa uma poderosa ferramenta educativa que converge diversas disciplinas. </br>Através dela, os conceitos de Ciência, Tecnologia, Engenharia, Artes e Matemática (STEAM) são unificados, proporcionando uma abordagem holística ao aprendizado.</br> Com esta integração, os estudantes podem visualizar como esses campos se entrelaçam na prática, incentivando a inovação e a criatividade. </br> - Recursos disponíveis: PCB da BitDogLab: Esta placa de circuito é a alma do projeto. Neste repositório você pode obter os arquivos de fabricação.</br> O projeto BitDogLab está disponível gratuitamente no GitHub para quem deseja acessá-lo e contribuir.</br> Atualmente, estamos na quarta versão de desenvolvimento, que trouxe inovações significativas: foram incorporados conectores específicos para os dois canais I2C e, além disso, agora é possível carregar a bateria da placa através de um mini painel solar, ampliando suas possibilidades de uso e sustentabilidade."
+        
+      ]
+    },
+    {
+      "tag": "codigo LED RGB",
+      "patterns": [
+        "Como faço para acender o LED RGB",
+        "Como faço para acender o LED",
+        "Acender LED",
+        "Código simples",
+      	"Exemplo de código simples",
+      	"Exemplo de código",
+      	"Exemplo"
+      ],
+      "responses": [
+        "Um exemplo simples de código para acender LEDs na placa BitDogLab. </br> </br> \n <div class='code'> <code> from machine import Pin </br> </br> led = Pin(13, Pin.OUT) </br></br> \n led.high() </br>time.sleep(3) </br> led.low()</code></br></div>" 
+      ]
+    },
+    {
+      "tag": "codigo buzzer",
+      "patterns": [
+        "Como faço para utilizar o buzzer",
+        "buzzer",
+        "musica",
+        "música",
+        "buzzers",
+        "Tocar musica",
+        "Tocar música",
+        "Emitir som",
+        "Auto-falante",
+        "Autofalante",
+        "Auto falante",
+      	"Exemplo de código para utilizar o buzzer",
+        "Exemplo buzzer",
+        "Exemplo som"
+      ],
+      "responses": [
+        "<h2>Exemplo de código: </h2> <p>Toca uma melodia simples </p> <div class='code'> <code>from machine import Pin, PWM </br> </br> import time </br> </br> # Pino GPIO conectado ao buzzer </br> buzzer_pin = Pin(21) </br></br> # Inicializa o objeto PWM no pino do buzzer </br> buzzer_pwm = PWM(buzzer_pin) </br></br> # Frequência da nota musical (em Hz) </br>  NOTA_C4 = 261.63 </br> NOTA_D4 = 293.66 </br> NOTA_E4 = 329.63 </br> NOTA_F4 = 349.23 </br> NOTA_G4 = 392.00 </br> NOTA_A4 = 440.00 </br> NOTA_B4 = 493.88 </br></br> # Função para tocar uma nota por um determinado período de tempo </br>def tocar_nota(frequencia, duracao): </br> &#160 buzzer_pwm.freq(int(frequencia))</br> &#160 time.sleep(duracao) </br>&#160 buzzer_pwm.duty_u16(0)  # Desliga o buzzer </br> </br> # Melodia simples </br> melodia = [ </br> (NOTA_C4, 0.5), </br> (NOTA_D4, 0.5), </br> (NOTA_E4, 0.5), </br> (NOTA_F4, 0.5), </br> (NOTA_G4, 0.5), </br> (NOTA_A4, 0.5), </br> (NOTA_B4, 0.5), </br> ] </br> </br> # Tocar a melodia </br> for nota, duracao in melodia: </br> &#160 tocar_nota(nota, duracao) </br> &nbsp time.sleep(0.1)  # Aguarda um curto período entre as notas </br> </br> # Encerra o PWM </br> buzzer_pwm.deinit() </code></div> "
+      ]
+    },
+    {
+      "tag": "BIH",
+      "patterns": [
+        "Banco de informações de hardware",
+      	"hardware",
+        "Componetes Fisicos",
+        "Componentes de hardware",
+        "Conexão de hardware",
+        "Configurações hardware",
+          "Configurações"
+      ],
+      "responses": [
+        "<h3>Conexões e Configurações de Hardware:</h3> <p>\n \n As conexões da Raspberry Pi pico com outros componentes estão realizadas da seguinte forma: </p> </br> </br> \n Um LED RGB catodo comum tem o eletrodo do vermelho lidado no GPIO 12 através de um resistor de 220 ohm, o pino de verde está ligado no GPIO 13 também através de um resistor de 220 ohm e o pino do azul no GPIO 11 através de um resistor de 150 ohm. \n <p>Um botão, identificado como Botão A, está conectado no GPIO5 da Raspberry Pi Pico.</p> <p> O outro terminal do botão está conectado ao GND da placa. \n Outro botão, identificado como Botão B, está conectado no GPIO6 da Raspberry pi pico. O outro terminal do botão também está conectado ao GND da placa.  \n Deve-se portanto nos GPIO5 e 6 configurar resistores de pull-up internos. Isso significa que o estado padrão dos pinos será HIGH (alto), e quando o botão for pressionado, o estado mudará para LOW (baixo). Outro botão, identificado como RESET, está conectado no RUN (pino número 30) da Raspberry pi pico. O outro terminal do botão também está conectado ao GND da placa.  </br> \n \n Um buzzer passivo, identificado como Buzzer A, está conectado - através de um transistor - no GPIO21 da Raspberry pi pico. Outro buzzer passivo, identificado como Buzzer B, está conectado no GPIO8 da Raspberry pi pico. \n  </br> O pino in de uma matriz de LEDs 5050 RGB de 5 linhas por 5 colunas tipo WS2812B (Neopixel) está conectada ao GPIO7. \n Um joystick analógico tipo KY023 tem a saída VRy conectada ao GPIO26 e a saída VRx ao GPIO27. Seu botão SW está conectada ao GPIO22, o outro terminal do botão está no GND. </br> \n Um display OLED 128 colunas por  x 64 linhas de 0,96 polegadas com comunicação I2C, tem seu pino SDA conectado ao GPIO14 e o pino SCL com o GPIO15, estes pinos são do canal I2C0. Esse display (normalmente configurado no endereço 0x3C)  exige o carregamento da biblioteca ssd1306.py na Raspiberry pi pico. \n </br> Um módulo microfone de eletreto com saída analógica está conectado ao GP28. O nível médio do sinal de saída é 1,65 V. A tensão na saída do módulo varia de 0V até 3,3V </p> <p> Um conector Insulation-Displacement Connector (ICD) box de 14 pinos é usado para expansão de hardware e está assim conectado com a Raspberry Pi Pico: pino 1 com o GND, pino 2 com o 5V, pino 3 com 3V3, pino 4 com GPIO10, pino 5 com o GPIO28, pino 6 com o GPIO9, pino 7 com GND analogico. pino 8 com o GPIO4, pino 9 com o GPIO17, pino 10 com o GND, pino 11 com o GPIO16, pino 12 com GPIO19, pino 13 com o GND, pino 14 com o GPIO18.  </p> <p> Para uma comunicação SPI usamos os GPIO16 (RX), GPIO17(CSn), GP18 (SCK) e GP19 (TX). \n </br> Uma barra de terminais que permite a conexão de garras do tipo jacaré está assim conectada ao Raspberry Pi Pico: os eletrodos DIG 0, 1, 2 e 3 estão conectados aos GPIOs 3, 2, 1 e 0, respectivamente. </p> <p>Além disso esta barra de terminais possui mais 5 eletrodos conectados ao: GND analógico, GPIO 28, GND, 3V3 e 5V da Raspberry Pi Pico.</p> <p> Um conector de 4 pinos está posicionado na extremidade superior  da placa, dando acesso aos GPIO0 (SDA) e GPIO1(SCL) além do 3V3 e GND. Este conector é nomeado de I2C 0 e está do lado direito.</p> <p> Um outro conector de 4 pinos está posicionado na extremidade da placa, dando acesso aos GPIO2 (SDA) e GPIO3(SCL) além do 3V3 e GND. Este conector é nomeado de I2C 1 e está do lado esquerdo.</p>"
+      ]
+     },
+    {
+      "tag": "botoes",
+      "patterns": [
+        "apertar botão A",
+      	"apertar botão B",
+        "botões",
+        "acender leb usando botão",
+        "fazer ao apertar botão",
+        "ao apertar o botão",
+        "pressionar botão",
+        "pressionar botões",
+        "botão A",
+        "botão B"
+      ],
+      "responses": [
+        "<h3> Programa para acender o LED RGB usando o botão A (acender) e o Botão B (apagar) </h3> </br> <div class='code'> <code> from machine import Pin </br> import time </br></br> # Configuração dos pinos dos botões A e B </br> pino_botao_a = Pin(5, Pin.IN, Pin.PULL_UP) </br> # GPIO5 para o Botão A com resistor de pull-up interno <br> pino_botao_b = Pin(6, Pin.IN, Pin.PULL_UP)<br> # GPIO6 para o Botão B com resistor de pull-up interno<br><br><br># Configuração do pino do LED<br>pino_led = Pin(13, Pin.OUT)  # GPIO3 para o LED <br><br> #Variável para controlar o estado do LED <br> led_aceso = False <br><br># Função para acender o LED quando o Botão A for pressionado <br> def acender_led(): <br> &#160 global led_aceso <br> # Utilizamos a ariável global <br><br> &#160 estado_botao_a = pino_botao_a.value() <br><br> &#160 # Debounce simples <br> &#160 time.sleep_ms(20 <br><br> &#160 #Se o Botão A estiver pressionado (estado LOW) e o LED não estiver aceso, acende o LED<br>&#160 if not estado_botao_a and not led_aceso:<br> &#160 &#160 pino_led.value(1)<br> &#160 &#160 led_aceso = True<br><br> #Função para apagar o LED quando o Botão B for pressionado <br> def apagar_led():<br> &#160 global led_aceso <br> #Utilizamos a variável global<br> <br>  &#160 estado_botao_b =  pino_botao_b.value() <br><br> &#160 #Debounce simples<br> &#160 time.sleep_ms(20) <br> <br> &#160 #Se o Botão B estiver pressionado  (estado LOW) e o LED estiver aceso, apaga o LED <br> &#160 if not estado_botao_b and led_aceso:<br> &#160 &#160 pino_led.value(0)<br> &#160 &#160  led_aceso = False <br><br> # Loop principal<br> while True:<br> &#160 acender_led() <br> &#160 apagar_led()<br> &#160 time.sleep(0.1) # diciona um pequeno atraso para evitar leituras falsas </code> </div>"
+      ]
+    },
+    {
+      "tag": "coração",
+      "patterns": [
+        "coração",
+      	"coração vermelho",
+        "botões",
+        "coracao",
+        "coração leds",
+        "coração leds matriz led",
+        "coração leds matriz leds",
+        "coracao leds",
+        "coracao leds matriz leds"
+      ],
+      "responses": [
+        "<h3> Programa para acender/desenhar um coração com a matriz de LEDs </h3> </br>        <div class='code'> <code> from machine import Pin</br> import neopixel</br>import time</br></br></br># Número de LEDs na sua matriz 5x5</br>NUM_LEDS = 25</br></br># Inicializar a matriz de NeoPixels no GPIO7</br>np = neopixel.NeoPixel(Pin(7), NUM_LEDS)</br></br># Definindo a matriz de LEDs para formar um coração</br>coracao = [ </br>    [0, 0, 1, 0, 0], </br>     [0, 1, 1, 1, 0],</br>    [1, 1, 1, 1, 1],</br>    [1, 1, 1, 1, 1],</br>    [0, 1, 0, 1, 0],</br> </br>]</br># Função para acender a matriz de LEDs com base no padrão do coração</br>def acender_coracao():</br>&#160 for i in range(5):</br>&#160 &#160 for j in range(5):</br>&#160 &#160 &#160 index = i * 5 + j</br>&#160 &#160 &#160 if coracao[i][j] == 1:</br>&#160 &#160 &#160 &#160 np[index] = (20, 0, 0)  # Vermelho para formar o coração</br>&#160 &#160 &#160 else:</br>&#160 &#160 &#160 &#160 np[index] = (0, 0, 0)  # Desliga o LED</br></br>&#160 np.write()</br></br># Acender o coração por alguns segundos</br>acender_coracao()</br>time.sleep(5)</br></br> # Desligar todos os LEDs</br> for i in range(NUM_LEDS):</br> &#160 np[i] = (0, 0, 0)</br></br>np.write() </code> </div>"
+      ]
+    },
+    {
+      "tag": "joystick e oled",
+      "patterns": [
+        "joystick",
+      	"display OLED",
+        "OLED",
+        "display",
+        "tela",
+        "tela oled",
+        "atualizar o display",
+        "coracao leds",
+        "coracao leds matriz leds"
+      ],
+      "responses": [ "<h3> Atualizar o display OLED com as posições x e y atraveś do joystick</h3> </br> <div class='code'> <code> </br> from machine import Pin, I2C </br> import ssd1306 </br>  </br> # Inicializa o display OLED </br> i2c = I2C(0, sda=Pin(0), scl=Pin(1)) </br> display = ssd1306.SSD1306_I2C(128, 64, i2c) </br>  </br> # Variáveis para as posições x e y </br> x = 2 </br> y = 2 </br>  </br> # Função para atualizar o display OLED com as posições </br> def atualizar_display(): </br> &#160 display.fill(0)  # Limpa o display </br> &#160 display.text('x: {}'.format(x), 0, 0)  # Exibe a posição x </br> &#160 display.text('y: {}'.format(y), 0, 10)  # Exibe a posição y </br> &#160 display.show()  # Atualiza o display </br>  </br> # Exemplo de uso </br> while True: </br> &#160 # Atualiza as posições x e y conforme o joystick ou outros comandos </br> &#160 # ... </br>  </br> &#160 # Chama a função para atualizar o display OLED </br> &#160 atualizar_display() </br>  </br> &#160 # Aguarda um pouco antes da próxima atualização </br> &#160 time.sleep(0.2) </code> </div>" 
+      ]
+    },
+    {
+      "tag": "arco-íris ",
+      "patterns": [
+        "LED central da matriz",
+      	"pisque o led alternando entre as cores do arco-íris a cada piscada 7 vezes",
+        "som de beep no buzzer e esperaremos até o botão A",
+        "led central da matriz",
+        "pisque o led 8 vezes",
+        "pisque o led 7 vezes",
+        "pisque o led 6 vezes",
+        "pisque o led 5 vezes",
+        "pisque o led 4 vezes",
+        "pisque o led 3 vezes",
+        "pisque o led 2 vezes",
+        "pisque o led 1 vezes",
+        "intervalo de 1 segundo",
+        "intervalo de 2 segundo",
+        "intervalo de 3 segundo",
+        "cores do arco íris",
+        "cores do arco iris",
+        "arco iris",
+        "arco íris",
+        "arco-íris"
+      ],
+      "responses": [ 
+          "<h3>Pisque o LED do centro da matriz 7 vezes alternando na cor do arco-íris com intervalo de acendimento entre um e outro de 1 segundo. Após isso, toqua um beep no buzzer e aguarda o botão A ser apertado para reiniciar</h3> </br> <div class='code'> <code> </br> from machine import Pin, PWM</br>import time</br>import neopixel</br></br># Configuração dos LEDs RGB (Neopixel)</br>NUM_LEDS = 25</br>led_pin = Pin(7, Pin.OUT)  # Pino de controle dos LEDs Neopixel</br>np = neopixel.NeoPixel(led_pin, NUM_LEDS)</br></br># Configuração do Buzzer</br>buzzer_pin = Pin(21, Pin.OUT)</br>buzzer_pwm = PWM(buzzer_pin)</br></br># Função para tocar o beep</br>def tocar_beep():</br> &#160 buzzer_pwm.freq(1000)  # Frequência de 1kHz</br> &#160 buzzer_pwm.duty_u16(50000)  # 50% de ciclo de trabalho</br> &#160 time.sleep(0.1)  # Duração do beep</br> &#160 buzzer_pwm.duty_u16(0)  # Desliga o buzzer</br></br># Função para acender o LED central com cor do arco-íris</br>def acender_led_central(cor):</br> &#160 for i in range(NUM_LEDS):</br> &#160 np[i] = (0, 0, 0)  # Desliga todos os LEDs</br> &#160 np[12] = cor  # Acende o LED central com a cor especificada</br> &#160 np.write()</br></br># Cores do arco-íris</br>cores_arco_iris = [(255, 0, 0), (255, 127, 0), (255, 255, 0), (0, 255, 0),</br> &#160  &#160  &#160  &#160 (0, 0, 255), (75, 0, 130), (148, 0, 211)]</br></br># Pisca o LED central do arco-íris 7 vezes</br>def piscar_led_arco_iris():</br> &#160 for _ in range(7):</br> &#160  &#160 for cor in cores_arco_iris:</br> &#160  &#160  &#160 acender_led_central(cor)</br> &#160  &#160  &#160 time.sleep(1)  # Intervalo de 1 segundo entre as cores</br></br># Loop principal</br>while True:</br> &#160 # Pisca o LED do arco-íris 7 vezes</br> &#160 piscar_led_arco_iris()</br> &#160 </br> &#160 # Toca um beep no buzzer</br> &#160 tocar_beep()</br> &#160 </br> &#160 # Aguarda até o botão A ser pressionado para reiniciar</br> &#160 while Pin(5).value():  # Aguarda o botão A ser pressionado</br> &#160 pass</br> &#160 time.sleep(0.1)  # Aguarda um curto intervalo para evitar leituras errôneas </code> </div>",
+
+          "<h3>Pisque o LED do centro da matriz 6 vezes alternando na cor do arco-íris com intervalo de acendimento entre um e outro de 1 segundo. Após isso, toqua um beep no buzzer e aguarda o botão A ser apertado para reiniciar</h3> </br> <div class='code'> <code> </br> from machine import Pin, PWM</br>import time</br>import neopixel</br></br># Configuração dos LEDs RGB (Neopixel)</br>NUM_LEDS = 25</br>led_pin = Pin(7, Pin.OUT)  # Pino de controle dos LEDs Neopixel</br>np = neopixel.NeoPixel(led_pin, NUM_LEDS)</br></br># Configuração do Buzzer</br>buzzer_pin = Pin(21, Pin.OUT)</br>buzzer_pwm = PWM(buzzer_pin)</br></br># Função para tocar o beep</br>def tocar_beep():</br> &#160 buzzer_pwm.freq(1000)  # Frequência de 1kHz</br> &#160 buzzer_pwm.duty_u16(50000)  # 50% de ciclo de trabalho</br> &#160 time.sleep(0.1)  # Duração do beep</br> &#160 buzzer_pwm.duty_u16(0)  # Desliga o buzzer</br></br># Função para acender o LED central com cor do arco-íris</br>def acender_led_central(cor):</br> &#160 for i in range(NUM_LEDS):</br> &#160 np[i] = (0, 0, 0)  # Desliga todos os LEDs</br> &#160 np[12] = cor  # Acende o LED central com a cor especificada</br> &#160 np.write()</br></br># Cores do arco-íris</br>cores_arco_iris = [(255, 0, 0), (255, 127, 0), (255, 255, 0), (0, 255, 0),</br> &#160  &#160  &#160  &#160 (0, 0, 255), (75, 0, 130), (148, 0, 211)]</br></br># Pisca o LED central do arco-íris 6 vezes</br>def piscar_led_arco_iris():</br> &#160 for _ in range(7):</br> &#160  &#160 for cor in cores_arco_iris:</br> &#160  &#160  &#160 acender_led_central(cor)</br> &#160  &#160  &#160 time.sleep(1)  # Intervalo de 1 segundo entre as cores</br></br># Loop principal</br>while True:</br> &#160 # Pisca o LED do arco-íris 7 vezes</br> &#160 piscar_led_arco_iris()</br> &#160 </br> &#160 # Toca um beep no buzzer</br> &#160 tocar_beep()</br> &#160 </br> &#160 # Aguarda até o botão A ser pressionado para reiniciar</br> &#160 while Pin(5).value():  # Aguarda o botão A ser pressionado</br> &#160 pass</br> &#160 time.sleep(0.1)  # Aguarda um curto intervalo para evitar leituras errôneas </code> </div>",
+          
+          "<h3>Pisque o LED do centro da matriz 5 vezes alternando na cor do arco-íris com intervalo de acendimento entre um e outro de 1 segundo. Após isso, toqua um beep no buzzer e aguarda o botão A ser apertado para reiniciar</h3> </br> <div class='code'> <code> </br> from machine import Pin, PWM</br>import time</br>import neopixel</br></br># Configuração dos LEDs RGB (Neopixel)</br>NUM_LEDS = 25</br>led_pin = Pin(7, Pin.OUT)  # Pino de controle dos LEDs Neopixel</br>np = neopixel.NeoPixel(led_pin, NUM_LEDS)</br></br># Configuração do Buzzer</br>buzzer_pin = Pin(21, Pin.OUT)</br>buzzer_pwm = PWM(buzzer_pin)</br></br># Função para tocar o beep</br>def tocar_beep():</br> &#160 buzzer_pwm.freq(1000)  # Frequência de 1kHz</br> &#160 buzzer_pwm.duty_u16(50000)  # 50% de ciclo de trabalho</br> &#160 time.sleep(0.1)  # Duração do beep</br> &#160 buzzer_pwm.duty_u16(0)  # Desliga o buzzer</br></br># Função para acender o LED central com cor do arco-íris</br>def acender_led_central(cor):</br> &#160 for i in range(NUM_LEDS):</br> &#160  np[i] = (0, 0, 0)  # Desliga todos os LEDs</br> &#160 np[12] = cor  # Acende o LED central com a cor especificada</br> &#160 np.write()</br></br># Cores do arco-íris</br>cores_arco_iris = [(255, 0, 0), (255, 127, 0), (255, 255, 0), (0, 255, 0),</br> &#160  &#160  &#160  &#160 (0, 0, 255), (75, 0, 130), (148, 0, 211)]</br></br># Pisca o LED central do arco-íris 5 vezes</br>def piscar_led_arco_iris():</br> &#160 for _ in range(7):</br> &#160  &#160 for cor in cores_arco_iris:</br> &#160  &#160  &#160 acender_led_central(cor)</br> &#160  &#160  &#160 time.sleep(1)  # Intervalo de 1 segundo entre as cores</br></br># Loop principal</br>while True:</br> &#160 # Pisca o LED do arco-íris 7 vezes</br> &#160 piscar_led_arco_iris()</br> &#160 </br> &#160 # Toca um beep no buzzer</br> &#160 tocar_beep()</br> &#160 </br> &#160 # Aguarda até o botão A ser pressionado para reiniciar</br> &#160 while Pin(5).value():  # Aguarda o botão A ser pressionado</br> &#160 pass</br> &#160 time.sleep(0.1)  # Aguarda um curto intervalo para evitar leituras errôneas </code> </div>",
+          
+          "<h3>Pisque o LED do centro da matriz 4 vezes alternando na cor do arco-íris com intervalo de acendimento entre um e outro de 1 segundo. Após isso, toqua um beep no buzzer e aguarda o botão A ser apertado para reiniciar</h3> </br> <div class='code'> <code> </br> from machine import Pin, PWM</br>import time</br>import neopixel</br></br># Configuração dos LEDs RGB (Neopixel)</br>NUM_LEDS = 25</br>led_pin = Pin(7, Pin.OUT)  # Pino de controle dos LEDs Neopixel</br>np = neopixel.NeoPixel(led_pin, NUM_LEDS)</br></br># Configuração do Buzzer</br>buzzer_pin = Pin(21, Pin.OUT)</br>buzzer_pwm = PWM(buzzer_pin)</br></br># Função para tocar o beep</br>def tocar_beep():</br> &#160 buzzer_pwm.freq(1000)  # Frequência de 1kHz</br> &#160 buzzer_pwm.duty_u16(50000)  # 50% de ciclo de trabalho</br> &#160 time.sleep(0.1)  # Duração do beep</br> &#160 buzzer_pwm.duty_u16(0)  # Desliga o buzzer</br></br># Função para acender o LED central com cor do arco-íris</br>def acender_led_central(cor):</br> &#160 for i in range(NUM_LEDS):</br> &#160 np[i] = (0, 0, 0)  # Desliga todos os LEDs</br> &#160 np[12] = cor  # Acende o LED central com a cor especificada</br> &#160 np.write()</br></br># Cores do arco-íris</br>cores_arco_iris = [(255, 0, 0), (255, 127, 0), (255, 255, 0), (0, 255, 0),</br> &#160  &#160  &#160  &#160 (0, 0, 255), (75, 0, 130), (148, 0, 211)]</br></br># Pisca o LED central do arco-íris 4 vezes</br>def piscar_led_arco_iris():</br> &#160 for _ in range(7):</br> &#160  &#160 for cor in cores_arco_iris:</br> &#160  &#160  &#160 acender_led_central(cor)</br> &#160  &#160  &#160 time.sleep(1)  # Intervalo de 1 segundo entre as cores</br></br># Loop principal</br>while True:</br> &#160 # Pisca o LED do arco-íris 7 vezes</br> &#160 piscar_led_arco_iris()</br> &#160 </br> &#160 # Toca um beep no buzzer</br> &#160 tocar_beep()</br> &#160 </br> &#160 # Aguarda até o botão A ser pressionado para reiniciar</br> &#160 while Pin(5).value():  # Aguarda o botão A ser pressionado</br> &#160 pass</br> &#160 time.sleep(0.1)  # Aguarda um curto intervalo para evitar leituras errôneas </code> </div>",
+          
+          "<h3>Pisque o LED do centro da matriz 3 vezes alternando na cor do arco-íris com intervalo de acendimento entre um e outro de 1 segundo. Após isso, toqua um beep no buzzer e aguarda o botão A ser apertado para reiniciar</h3> </br> <div class='code'> <code> </br> from machine import Pin, PWM</br>import time</br>import neopixel</br></br># Configuração dos LEDs RGB (Neopixel)</br>NUM_LEDS = 25</br>led_pin = Pin(7, Pin.OUT)  # Pino de controle dos LEDs Neopixel</br>np = neopixel.NeoPixel(led_pin, NUM_LEDS)</br></br># Configuração do Buzzer</br>buzzer_pin = Pin(21, Pin.OUT)</br>buzzer_pwm = PWM(buzzer_pin)</br></br># Função para tocar o beep</br>def tocar_beep():</br> &#160 buzzer_pwm.freq(1000)  # Frequência de 1kHz</br> &#160 buzzer_pwm.duty_u16(50000)  # 50% de ciclo de trabalho</br> &#160 time.sleep(0.1)  # Duração do beep</br> &#160 buzzer_pwm.duty_u16(0)  # Desliga o buzzer</br></br># Função para acender o LED central com cor do arco-íris</br>def acender_led_central(cor):</br> &#160 for i in range(NUM_LEDS):</br> &#160 np[i] = (0, 0, 0)  # Desliga todos os LEDs</br> &#160 np[12] = cor  # Acende o LED central com a cor especificada</br> &#160 np.write()</br></br># Cores do arco-íris</br>cores_arco_iris = [(255, 0, 0), (255, 127, 0), (255, 255, 0), (0, 255, 0),</br> &#160  &#160  &#160  &#160 (0, 0, 255), (75, 0, 130), (148, 0, 211)]</br></br># Pisca o LED central do arco-íris 3 vezes</br>def piscar_led_arco_iris():</br> &#160 for _ in range(7):</br> &#160  &#160 for cor in cores_arco_iris:</br> &#160  &#160  &#160 acender_led_central(cor)</br> &#160  &#160  &#160 time.sleep(1)  # Intervalo de 1 segundo entre as cores</br></br># Loop principal</br>while True:</br> &#160 # Pisca o LED do arco-íris 7 vezes</br> &#160 piscar_led_arco_iris()</br> &#160 </br> &#160 # Toca um beep no buzzer</br> &#160 tocar_beep()</br> &#160 </br> &#160 # Aguarda até o botão A ser pressionado para reiniciar</br> &#160 while Pin(5).value():  # Aguarda o botão A ser pressionado</br> &#160 pass</br> &#160 time.sleep(0.1)  # Aguarda um curto intervalo para evitar leituras errôneas </code> </div>",
+          
+          "<h3>Pisque o LED do centro da matriz 2 vezes alternando na cor do arco-íris com intervalo de acendimento entre um e outro de 1 segundo. Após isso, toqua um beep no buzzer e aguarda o botão A ser apertado para reiniciar</h3> </br> <div class='code'> <code> </br> from machine import Pin, PWM</br>import time</br>import neopixel</br></br># Configuração dos LEDs RGB (Neopixel)</br>NUM_LEDS = 25</br>led_pin = Pin(7, Pin.OUT)  # Pino de controle dos LEDs Neopixel</br>np = neopixel.NeoPixel(led_pin, NUM_LEDS)</br></br># Configuração do Buzzer</br>buzzer_pin = Pin(21, Pin.OUT)</br>buzzer_pwm = PWM(buzzer_pin)</br></br># Função para tocar o beep</br>def tocar_beep():</br> &#160 buzzer_pwm.freq(1000)  # Frequência de 1kHz</br> &#160 buzzer_pwm.duty_u16(50000)  # 50% de ciclo de trabalho</br> &#160 time.sleep(0.1)  # Duração do beep</br> &#160 buzzer_pwm.duty_u16(0)  # Desliga o buzzer</br></br># Função para acender o LED central com cor do arco-íris</br>def acender_led_central(cor):</br> &#160 for i in range(NUM_LEDS):</br> &#160 np[i] = (0, 0, 0)  # Desliga todos os LEDs</br> &#160 np[12] = cor  # Acende o LED central com a cor especificada</br> &#160 np.write()</br></br># Cores do arco-íris</br>cores_arco_iris = [(255, 0, 0), (255, 127, 0), (255, 255, 0), (0, 255, 0),</br> &#160  &#160  &#160  &#160 (0, 0, 255), (75, 0, 130), (148, 0, 211)]</br></br># Pisca o LED central do arco-íris 2 vezes</br>def piscar_led_arco_iris():</br> &#160 for _ in range(7):</br> &#160  &#160 for cor in cores_arco_iris:</br> &#160  &#160  &#160 acender_led_central(cor)</br> &#160  &#160  &#160 time.sleep(1)  # Intervalo de 1 segundo entre as cores</br></br># Loop principal</br>while True:</br> &#160 # Pisca o LED do arco-íris 7 vezes</br> &#160 piscar_led_arco_iris()</br> &#160 </br> &#160 # Toca um beep no buzzer</br> &#160 tocar_beep()</br> &#160 </br> &#160 # Aguarda até o botão A ser pressionado para reiniciar</br> &#160 while Pin(5).value():  # Aguarda o botão A ser pressionado</br> &#160 pass</br> &#160 time.sleep(0.1)  # Aguarda um curto intervalo para evitar leituras errôneas </code> </div>",
+          
+          "<h3>Pisque o LED do centro da matriz 1 vezes alternando na cor do arco-íris com intervalo de acendimento entre um e outro de 1 segundo. Após isso, toqua um beep no buzzer e aguarda o botão A ser apertado para reiniciar</h3> </br> <div class='code'> <code> </br> from machine import Pin, PWM</br>import time</br>import neopixel</br></br># Configuração dos LEDs RGB (Neopixel)</br>NUM_LEDS = 25</br>led_pin = Pin(7, Pin.OUT)  # Pino de controle dos LEDs Neopixel</br>np = neopixel.NeoPixel(led_pin, NUM_LEDS)</br></br># Configuração do Buzzer</br>buzzer_pin = Pin(21, Pin.OUT)</br>buzzer_pwm = PWM(buzzer_pin)</br></br># Função para tocar o beep</br>def tocar_beep():</br> &#160 buzzer_pwm.freq(1000)  # Frequência de 1kHz</br> &#160 buzzer_pwm.duty_u16(50000)  # 50% de ciclo de trabalho</br> &#160 time.sleep(0.1)  # Duração do beep</br> &#160 buzzer_pwm.duty_u16(0)  # Desliga o buzzer</br></br># Função para acender o LED central com cor do arco-íris</br>def acender_led_central(cor):</br> &#160 for i in range(NUM_LEDS):</br> &#160 np[i] = (0, 0, 0)  # Desliga todos os LEDs</br> &#160 np[12] = cor  # Acende o LED central com a cor especificada</br> &#160 np.write()</br></br># Cores do arco-íris</br>cores_arco_iris = [(255, 0, 0), (255, 127, 0), (255, 255, 0), (0, 255, 0),</br> &#160  &#160  &#160  &#160 (0, 0, 255), (75, 0, 130), (148, 0, 211)]</br></br># Pisca o LED central do arco-íris 1 vezes</br>def piscar_led_arco_iris():</br> &#160 for _ in range(7):</br> &#160  &#160 for cor in cores_arco_iris:</br> &#160  &#160  &#160 acender_led_central(cor)</br> &#160  &#160  &#160 time.sleep(1)  # Intervalo de 1 segundo entre as cores</br></br># Loop principal</br>while True:</br> &#160 # Pisca o LED do arco-íris 7 vezes</br> &#160 piscar_led_arco_iris()</br> &#160 </br> &#160 # Toca um beep no buzzer</br> &#160 tocar_beep()</br> &#160 </br> &#160 # Aguarda até o botão A ser pressionado para reiniciar</br> &#160 while Pin(5).value():  # Aguarda o botão A ser pressionado</br> &#160 pass</br> &#160 time.sleep(0.1)  # Aguarda um curto intervalo para evitar leituras errôneas </code> </div>",
+
+          "<h3>Pisque o LED do centro da matriz 1 vez alternando na cor do arco-íris com intervalo de acendimento entre um e outro de 2 segundos. Após isso, toqua um beep no buzzer e aguarda o botão A ser apertado para reiniciar</h3> </br> <div class='code'> <code> </br> from machine import Pin, PWM</br>import time</br>import neopixel</br></br># Configuração dos LEDs RGB (Neopixel)</br>NUM_LEDS = 25</br>led_pin = Pin(7, Pin.OUT)  # Pino de controle dos LEDs Neopixel</br>np = neopixel.NeoPixel(led_pin, NUM_LEDS)</br></br># Configuração do Buzzer</br>buzzer_pin = Pin(21, Pin.OUT)</br>buzzer_pwm = PWM(buzzer_pin)</br></br># Função para tocar o beep</br>def tocar_beep():</br> &#160 buzzer_pwm.freq(1000)  # Frequência de 1kHz</br> &#160 buzzer_pwm.duty_u16(50000)  # 50% de ciclo de trabalho</br> &#160 time.sleep(0.1)  # Duração do beep</br> &#160 buzzer_pwm.duty_u16(0)  # Desliga o buzzer</br></br># Função para acender o LED central com cor do arco-íris</br>def acender_led_central(cor):</br> &#160 for i in range(NUM_LEDS):</br> &#160 np[i] = (0, 0, 0)  # Desliga todos os LEDs</br> &#160 np[12] = cor  # Acende o LED central com a cor especificada</br> &#160 np.write()</br></br># Cores do arco-íris</br>cores_arco_iris = [(255, 0, 0), (255, 127, 0), (255, 255, 0), (0, 255, 0),</br> &#160  &#160  &#160  &#160 (0, 0, 255), (75, 0, 130), (148, 0, 211)]</br></br># Pisca o LED central do arco-íris 7 vezes</br>def piscar_led_arco_iris():</br> &#160 for _ in range(7):</br> &#160  &#160 for cor in cores_arco_iris:</br> &#160  &#160  &#160 acender_led_central(cor)</br> &#160  &#160  &#160 time.sleep(1)  # Intervalo de 1 segundo entre as cores</br></br># Loop principal</br>while True:</br> &#160 # Pisca o LED do arco-íris 7 vezes</br> &#160 piscar_led_arco_iris()</br> &#160 </br> &#160 # Toca um beep no buzzer</br> &#160 tocar_beep()</br> &#160 </br> &#160 # Aguarda até o botão A ser pressionado para reiniciar</br> &#160 while Pin(5).value():  # Aguarda o botão A ser pressionado</br> &#160 pass</br> &#160 time.sleep(0.2)  # Aguarda um curto intervalo para evitar leituras errôneas </code> </div>"
+          
+      ]
+    }
+  ] 
+}
